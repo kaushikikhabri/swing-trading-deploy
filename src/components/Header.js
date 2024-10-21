@@ -41,6 +41,10 @@ const Header = ({ name, isLoggedIn, onLogin, onLogout }) => {
     navigate("/login");
   };
 
+  const handleDashboard = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div className="">
       <Navbar expand="lg" className="navbar-custom">
@@ -95,7 +99,7 @@ const Header = ({ name, isLoggedIn, onLogin, onLogout }) => {
             <Nav className="hamburger">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/#/data">Data</Nav.Link>
-              <Nav.Link href="/#/dashboard">Dashboard</Nav.Link>
+              <Nav.Link onClick={handleDashboard}>Dashboard</Nav.Link>
               <Nav.Link href="/#/chart">Chart</Nav.Link>
             </Nav>
           </Navbar.Collapse>
