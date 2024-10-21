@@ -94,9 +94,9 @@ const Header = ({ name, isLoggedIn, onLogin, onLogout }) => {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="hamburger">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/data">Data</Nav.Link>
-              <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-              <Nav.Link href="/chart">Chart</Nav.Link>
+              <Nav.Link href="/#/data">Data</Nav.Link>
+              <Nav.Link href="/#/dashboard">Dashboard</Nav.Link>
+              <Nav.Link href="/#/chart">Chart</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
