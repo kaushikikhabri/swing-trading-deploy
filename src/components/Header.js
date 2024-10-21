@@ -45,12 +45,24 @@ const Header = ({ name, isLoggedIn, onLogin, onLogout }) => {
     navigate("/dashboard");
   };
 
+  const handleHome = () => {
+    navigate("/");
+  };
+
+  const handleData = () => {
+    navigate("/data");
+  };
+
+  const handleChart = () => {
+    navigate("/chart");
+  };
+
   return (
     <div className="">
       <Navbar expand="lg" className="navbar-custom">
         <Container className="nav-container">
-          <Navbar.Brand className="brand-link" href="/">
-            TradingView
+          <Navbar.Brand onClick={handleHome} className="brand-link">
+            ChartView
           </Navbar.Brand>
 
           <div className="d-none d-lg-flex ">
@@ -97,10 +109,10 @@ const Header = ({ name, isLoggedIn, onLogin, onLogout }) => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="hamburger">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/#/data">Data</Nav.Link>
+              <Nav.Link onClick={handleHome}>Home</Nav.Link>
+              <Nav.Link onClick={handleData}>Data</Nav.Link>
               <Nav.Link onClick={handleDashboard}>Dashboard</Nav.Link>
-              <Nav.Link href="/#/chart">Chart</Nav.Link>
+              <Nav.Link onClick={handleChart}>Chart</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
